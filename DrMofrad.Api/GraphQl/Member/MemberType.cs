@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DrMofrad.Api.Model;
-using HotChocolate.Types;
+﻿using HotChocolate.Types;
 
 namespace DrMofrad.Api.GraphQl.Member
 {

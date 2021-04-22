@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using HotChocolate;
+﻿using System.Linq;
 using DrMofrad.Api.Model;
+using HotChocolate;
 using HotChocolate.Data;
-using System.Threading.Tasks;
 
 namespace DrMofrad.Api.GraphQl
 {
@@ -19,14 +16,18 @@ namespace DrMofrad.Api.GraphQl
         //{
         //    return drMofradDbContext.Members;
         //}
-
-        public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext member) => member.Members;
+        public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext member)
+        {
+            return member.Members;
+        }
 
         public Model.Member FirstMember([ScopedService] DrMofradDbContext drMofradDbContext)
         {
             return drMofradDbContext.Members.FirstOrDefault();
         }
-        #endregion
+
+        #endregion Member
+
         #region GalleryCategories
 
         [UseDbContext(typeof(DrMofradDbContext))]
@@ -36,13 +37,16 @@ namespace DrMofrad.Api.GraphQl
         //{
         //    return drMofradDbContext.Members;
         //}
-
-        public IQueryable<Model.GalleryCategory> GetGalleryCategories([ScopedService] DrMofradDbContext member) => member.GalleryCategories;
+        public IQueryable<Model.GalleryCategory> GetGalleryCategories([ScopedService] DrMofradDbContext member)
+        {
+            return member.GalleryCategories;
+        }
 
         public Model.GalleryCategory FirsGalleryCategory([ScopedService] DrMofradDbContext drMofradDbContext)
         {
             return drMofradDbContext.GalleryCategories.FirstOrDefault();
         }
-        #endregion
+
+        #endregion GalleryCategories
     }
 }

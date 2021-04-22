@@ -1,14 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class DrMofradDbContext : DbContext
+    public class DrMofradDbContext : DbContext
     {
-
         public DrMofradDbContext(DbContextOptions<DrMofradDbContext> options)
             : base(options)
         {
@@ -35,8 +33,6 @@ namespace DrMofrad.Api.Model
         public virtual DbSet<TelegramChannel> TelegramChannels { get; set; }
         public virtual DbSet<TelegramMessage> TelegramMessages { get; set; }
         public virtual DbSet<TelegramUser> TelegramUsers { get; set; }
-
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -109,7 +105,7 @@ namespace DrMofrad.Api.Model
 
             modelBuilder.Entity<MigrationHistory>(entity =>
             {
-                entity.HasKey(e => new { e.MigrationId, e.ContextKey })
+                entity.HasKey(e => new {e.MigrationId, e.ContextKey})
                     .HasName("PK_dbo.__MigrationHistory");
             });
 
@@ -160,7 +156,7 @@ namespace DrMofrad.Api.Model
 
             modelBuilder.Entity<TelegramMessage>(entity =>
             {
-                entity.HasKey(e => new { e.MessageId, e.FromId })
+                entity.HasKey(e => new {e.MessageId, e.FromId})
                     .HasName("PK_dbo.TelegramMessages");
 
                 entity.HasOne(d => d.From)
@@ -170,14 +166,14 @@ namespace DrMofrad.Api.Model
                     .HasConstraintName("FK_TelegramMessages_TelegramUsers");
             });
 
-            modelBuilder.Entity<TelegramUser>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-            });
+            modelBuilder.Entity<TelegramUser>(entity => { entity.Property(e => e.Id).ValueGeneratedNever(); });
 
             OnModelCreatingPartial(modelBuilder);
         }
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        private void OnModelCreatingPartial(ModelBuilder modelBuilder)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using DrMofrad.Api.Model;
 using HotChocolate;
 using HotChocolate.Types;
@@ -19,8 +16,8 @@ namespace DrMofrad.Api.GraphQl.Gallery
             descriptor.Field(p => p.Lang)
                 .UseDbContext<DrMofradDbContext>()
                 .ResolveWith<Resolvers>(p => p.GetLang(default!, default!));
-
         }
+
         private class Resolvers
         {
             public Model.Lang GetLang(Model.Gallery _gallery,

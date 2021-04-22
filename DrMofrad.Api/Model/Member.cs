@@ -1,19 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-#nullable disable
+﻿#nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public class Member
+    public partial class Member
     {
-        [Key] public int Id { get; set; }
-
-        [StringLength(50)] public string FullName { get; set; }
-
-        [StringLength(50)] public string UserName { get; set; }
-
-        [StringLength(1000)] public string Password { get; set; }
-
-        [StringLength(100)] public string Email { get; set; }
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
@@ -105,7 +104,7 @@ namespace DrMofrad.Api.Model
 
             modelBuilder.Entity<MigrationHistory>(entity =>
             {
-                entity.HasKey(e => new {e.MigrationId, e.ContextKey})
+                entity.HasKey(e => new { e.MigrationId, e.ContextKey })
                     .HasName("PK_dbo.__MigrationHistory");
             });
 
@@ -156,7 +155,7 @@ namespace DrMofrad.Api.Model
 
             modelBuilder.Entity<TelegramMessage>(entity =>
             {
-                entity.HasKey(e => new {e.MessageId, e.FromId})
+                entity.HasKey(e => new { e.MessageId, e.FromId })
                     .HasName("PK_dbo.TelegramMessages");
 
                 entity.HasOne(d => d.From)
@@ -167,13 +166,6 @@ namespace DrMofrad.Api.Model
             });
 
             modelBuilder.Entity<TelegramUser>(entity => { entity.Property(e => e.Id).ValueGeneratedNever(); });
-
-            OnModelCreatingPartial(modelBuilder);
-        }
-
-        private void OnModelCreatingPartial(ModelBuilder modelBuilder)
-        {
-            throw new NotImplementedException();
         }
     }
 }

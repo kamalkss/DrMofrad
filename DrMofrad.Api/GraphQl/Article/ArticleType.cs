@@ -10,7 +10,7 @@ namespace DrMofrad.Api.GraphQl.Article
         protected override void Configure(IObjectTypeDescriptor<Model.Article> descriptor)
         {
             descriptor.Description("Articles");
-            descriptor.Field(p => p.ArticleCategory)
+            descriptor.Field(p => p.ArticleCategories)
                 .UseDbContext<DrMofradDbContext>()
                 .ResolveWith<Resolver>(p => p.GetArticleCategory(default!, default));
             descriptor.Field(p => p.Lang)

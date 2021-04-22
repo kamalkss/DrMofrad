@@ -1,13 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-#nullable disable
+﻿#nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public class File
+    public partial class File
     {
-        [Key] public int Id { get; set; }
-
+        public int Id { get; set; }
         public string Title { get; set; }
         public string FileUrl { get; set; }
     }

@@ -1,20 +1,22 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
 
 #nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public class ArticleCategory
+    public partial class ArticleCategory
     {
-        [Key] public int Id { get; set; }
+        public ArticleCategory()
+        {
+            Articles = new HashSet<Article>();
+        }
 
-        [StringLength(50)] public string Title { get; set; }
-
-        [Column("imgUrl")]
-        [StringLength(1000)]
+        public int Id { get; set; }
+        public string Title { get; set; }
         public string ImgUrl { get; set; }
-
         public int? LangId { get; set; }
+
+        public virtual Lang Lang { get; set; }
+        public virtual ICollection<Article> Articles { get; set; }
     }
 }

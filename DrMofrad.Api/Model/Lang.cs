@@ -1,17 +1,15 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 #nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    [Table("Lang")]
-    public class Lang
+    public partial class Lang
     {
         public Lang()
         {
             ActivityCenters = new HashSet<ActivityCenter>();
+            ArticleCategories = new HashSet<ArticleCategory>();
             Articles = new HashSet<Article>();
             Clinics = new HashSet<Clinic>();
             Faqs = new HashSet<Faq>();
@@ -23,35 +21,19 @@ namespace DrMofrad.Api.Model
             SlideShows = new HashSet<SlideShow>();
         }
 
-        [Key] public int Id { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
 
-        [Required] [StringLength(200)] public string Title { get; set; }
-
-        [InverseProperty(nameof(ActivityCenter.Lang))]
         public virtual ICollection<ActivityCenter> ActivityCenters { get; set; }
-
-        [InverseProperty(nameof(Article.Lang))]
+        public virtual ICollection<ArticleCategory> ArticleCategories { get; set; }
         public virtual ICollection<Article> Articles { get; set; }
-
-        [InverseProperty(nameof(Clinic.Lang))] public virtual ICollection<Clinic> Clinics { get; set; }
-
-        [InverseProperty(nameof(Faq.Lang))] public virtual ICollection<Faq> Faqs { get; set; }
-
-        [InverseProperty(nameof(Gallery.Lang))]
+        public virtual ICollection<Clinic> Clinics { get; set; }
+        public virtual ICollection<Faq> Faqs { get; set; }
         public virtual ICollection<Gallery> Galleries { get; set; }
-
-        [InverseProperty(nameof(GalleryCategory.Lang))]
         public virtual ICollection<GalleryCategory> GalleryCategories { get; set; }
-
-        [InverseProperty(nameof(HoursAttend.Lang))]
         public virtual ICollection<HoursAttend> HoursAttends { get; set; }
-
-        [InverseProperty(nameof(Page.Lang))] public virtual ICollection<Page> Pages { get; set; }
-
-        [InverseProperty(nameof(SeoSetting.Lang))]
+        public virtual ICollection<Page> Pages { get; set; }
         public virtual ICollection<SeoSetting> SeoSettings { get; set; }
-
-        [InverseProperty(nameof(SlideShow.Lang))]
         public virtual ICollection<SlideShow> SlideShows { get; set; }
     }
 }

@@ -1,4 +1,7 @@
 using DrMofrad.Api.GraphQl;
+using DrMofrad.Api.GraphQl.Appointment;
+using DrMofrad.Api.GraphQl.Article;
+using DrMofrad.Api.GraphQl.ArticleCategory;
 using DrMofrad.Api.GraphQl.Gallery;
 using DrMofrad.Api.GraphQl.GalleryCategory;
 using DrMofrad.Api.GraphQl.Lang;
@@ -37,6 +40,10 @@ namespace DrMofrad.Api
                 .AddType<GalleryCategoriesType>()
                 .AddType<GalleryType>()
                 .AddType<LangType>()
+                .AddType<ArticleType>()
+                .AddType<ArticleCategoryType>()
+                .AddType<LangType>()
+                .AddType<AppointmentType>()
                 .AddFiltering()
                 .AddSorting();
         }

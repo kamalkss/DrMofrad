@@ -58,7 +58,7 @@ namespace DrMofrad.Api.GraphQl
         //{
         //    return drMofradDbContext.Members;
         //}
-        public IQueryable<Model.Gallery> GetCategories([ScopedService] DrMofradDbContext member)
+        public IQueryable<Model.Gallery> GetGalleries([ScopedService] DrMofradDbContext member)
         {
             return member.Galleries;
         }
@@ -105,7 +105,7 @@ namespace DrMofrad.Api.GraphQl
             return member.Appointments;
         }
 
-        public Model.Appointment Appointment([ScopedService] DrMofradDbContext drMofradDbContext)
+        public Model.Appointment FirstAppointment([ScopedService] DrMofradDbContext drMofradDbContext)
         {
             return drMofradDbContext.Appointments.FirstOrDefault();
         }

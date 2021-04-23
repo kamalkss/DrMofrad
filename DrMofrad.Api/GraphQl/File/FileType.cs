@@ -7,7 +7,7 @@ namespace DrMofrad.Api.GraphQl.File
         protected override void Configure(IObjectTypeDescriptor<Model.File> descriptor)
         {
             base.Configure(descriptor);
-            descriptor.Description(("Files"));
+            descriptor.Description("Files");
         }
     }
 }

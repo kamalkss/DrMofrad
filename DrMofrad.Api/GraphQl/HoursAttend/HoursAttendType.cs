@@ -17,7 +17,8 @@ namespace DrMofrad.Api.GraphQl.HoursAttend
 
         private class Resolver
         {
-            public Model.Lang GetLang(Model.HoursAttend _hoursAttend, [ScopedService] DrMofradDbContext drMofradDbContext)
+            public Model.Lang GetLang(Model.HoursAttend _hoursAttend,
+                [ScopedService] DrMofradDbContext drMofradDbContext)
             {
                 return drMofradDbContext.Langs.FirstOrDefault(lang => lang.Id == _hoursAttend.LangId);
             }

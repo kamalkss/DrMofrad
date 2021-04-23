@@ -1,4 +1,4 @@
 ﻿namespace DrMofrad.Api.GraphQl.Member
 {
-    public record AddActivityCenterPayLoad(string FullName);
+    public record AddMemberPayLoad(Model.Member Member);
 }

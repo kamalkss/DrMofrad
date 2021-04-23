@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 #nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class TelegramMessage
+    public class TelegramMessage
     {
         public int MessageId { get; set; }
         public long FromId { get; set; }

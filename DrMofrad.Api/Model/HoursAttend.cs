@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class HoursAttend
+    public class HoursAttend
     {
         public int Id { get; set; }
         public string Day { get; set; }

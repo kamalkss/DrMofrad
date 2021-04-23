@@ -1,4 +1,5 @@
 ﻿namespace DrMofrad.Api.GraphQl.Member
 {
-    public record AddActivityCenterInput(string FullName, string UserName, string Password, string Email);
+    public record AddMemberInput(string MemberFullName, string MemberUserName, string MemberPassword,
+        string MemberEmail);
 }

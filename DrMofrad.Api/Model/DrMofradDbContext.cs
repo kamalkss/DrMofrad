@@ -4,10 +4,8 @@
 
 namespace DrMofrad.Api.Model
 {
-    public partial class DrMofradDbContext : DbContext
+    public class DrMofradDbContext : DbContext
     {
-        
-
         public DrMofradDbContext(DbContextOptions<DrMofradDbContext> options)
             : base(options)
         {
@@ -379,7 +377,7 @@ namespace DrMofrad.Api.Model
 
             modelBuilder.Entity<TelegramMessage>(entity =>
             {
-                entity.HasKey(e => new { e.MessageId, e.FromId })
+                entity.HasKey(e => new {e.MessageId, e.FromId})
                     .HasName("PK_dbo.TelegramMessages");
 
                 entity.Property(e => e.MessageId).HasColumnName("message_id");

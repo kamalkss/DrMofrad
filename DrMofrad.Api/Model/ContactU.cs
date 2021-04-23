@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 #nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class ContactU
+    public class ContactU
     {
         public int Id { get; set; }
         public string FullName { get; set; }

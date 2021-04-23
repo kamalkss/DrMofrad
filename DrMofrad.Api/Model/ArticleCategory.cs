@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 #nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class ArticleCategory
+    public class ArticleCategory
     {
         public ArticleCategory()
         {

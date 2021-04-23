@@ -2,5 +2,6 @@
 
 namespace DrMofrad.Api.GraphQl.ContactUs
 {
-    public record AddContactUsInput(string FullName, string Email, string Cell, string Messeges,DateTime date,bool isreaded);
+    public record AddContactUsInput(string ContactUsFullName, string ContactUsEmail, string ContactUsCell,
+        string ContactUsMesseges, DateTime ContactUsdate, bool ContactUsisreaded);
 }

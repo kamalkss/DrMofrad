@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 #nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class Lang
+    public class Lang
     {
         public Lang()
         {

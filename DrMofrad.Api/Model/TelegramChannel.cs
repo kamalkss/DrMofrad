@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class TelegramChannel
+    public class TelegramChannel
     {
         public string Username { get; set; }
         public long? Definer { get; set; }

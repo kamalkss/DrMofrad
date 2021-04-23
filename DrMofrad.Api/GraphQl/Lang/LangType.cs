@@ -71,7 +71,7 @@ namespace DrMofrad.Api.GraphQl.Lang
                 return drMofradDbContext.ActivityCenters.Where(p => p.LangId == _lang.Id);
             }
 
-            public IQueryable<Model.Clinic> GetClinics(Model.Lang _lang,
+            public IQueryable<Clinic> GetClinics(Model.Lang _lang,
                 [ScopedService] DrMofradDbContext drMofradDbContext)
             {
                 return drMofradDbContext.Clinics.Where(p => p.LangId == _lang.Id);

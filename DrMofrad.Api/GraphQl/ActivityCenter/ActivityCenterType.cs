@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using DrMofrad.Api.Model;
+﻿using DrMofrad.Api.Model;
 using HotChocolate;
 using HotChocolate.Types;
+using System.Linq;
 
 namespace DrMofrad.Api.GraphQl.ActivityCenter
 {

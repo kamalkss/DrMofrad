@@ -2,10 +2,20 @@ using DrMofrad.Api.GraphQl;
 using DrMofrad.Api.GraphQl.Appointment;
 using DrMofrad.Api.GraphQl.Article;
 using DrMofrad.Api.GraphQl.ArticleCategory;
+using DrMofrad.Api.GraphQl.Cilinic;
+using DrMofrad.Api.GraphQl.ContactUs;
+using DrMofrad.Api.GraphQl.Faq;
+using DrMofrad.Api.GraphQl.File;
 using DrMofrad.Api.GraphQl.Gallery;
 using DrMofrad.Api.GraphQl.GalleryCategory;
-using DrMofrad.Api.GraphQl.Lang;
-using DrMofrad.Api.GraphQl.Member;
+using DrMofrad.Api.GraphQl.HoursAttend;
+using DrMofrad.Api.GraphQl.Opinion;
+using DrMofrad.Api.GraphQl.Page;
+using DrMofrad.Api.GraphQl.SeoSetting;
+using DrMofrad.Api.GraphQl.SlideShow;
+using DrMofrad.Api.GraphQl.TelegramChannel;
+using DrMofrad.Api.GraphQl.TelegramMessage;
+using DrMofrad.Api.GraphQl.TelegramUser;
 using DrMofrad.Api.Model;
 using GraphQL.Server.Ui.Voyager;
 using Microsoft.AspNetCore.Builder;
@@ -36,14 +46,23 @@ namespace DrMofrad.Api
                 .AddGraphQL()
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
-                .AddType<MemberType>()
-                .AddType<GalleryCategoriesType>()
-                .AddType<GalleryType>()
-                .AddType<LangType>()
-                .AddType<ArticleType>()
-                .AddType<ArticleCategoryType>()
-                .AddType<LangType>()
                 .AddType<AppointmentType>()
+                .AddType<ArticleCategoryType>()
+                .AddType<ArticleType>()
+                .AddType<CilinicType>()
+                .AddType<GalleryType>()
+                .AddType<GalleryCategoriesType>()
+                .AddType<ContactUsType>()
+                .AddType<FaqType>()
+                .AddType<FileType>()
+                .AddType<HoursAttendType>()
+                .AddType<OpinionType>()
+                .AddType<PageType>()
+                .AddType<SeoSettingType>()
+                .AddType<SlideShowType>()
+                .AddType<TelegramChannelType>()
+                .AddType<TelegramMessageType>()
+                .AddType<TelegramUserType>()
                 .AddFiltering()
                 .AddSorting();
         }
@@ -57,12 +76,13 @@ namespace DrMofrad.Api
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints => { endpoints.MapGraphQL(); });
-
-            app.UseGraphQLVoyager(new VoyagerOptions
+            app.UseEndpoints(endpoints =>
             {
-                GraphQLEndPoint = "/graphql"
+                endpoints.MapGraphQL();
+                endpoints.MapGraphQLVoyager();
             });
+
+            app.UseGraphQLVoyager();
         }
     }
 }

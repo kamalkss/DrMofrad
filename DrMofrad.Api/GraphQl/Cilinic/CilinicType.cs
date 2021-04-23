@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using DrMofrad.Api.Model;
+﻿using DrMofrad.Api.Model;
 using HotChocolate;
 using HotChocolate.Types;
+using System.Linq;
 
 namespace DrMofrad.Api.GraphQl.Cilinic
 {
@@ -14,6 +14,7 @@ namespace DrMofrad.Api.GraphQl.Cilinic
                 .ResolveWith<Resolver>(resolver => resolver.GetLang(default!, default!))
                 .UseDbContext<DrMofradDbContext>();
         }
+
         private class Resolver
         {
             public Model.Lang GetLang(Model.Clinic _clinic, [ScopedService] DrMofradDbContext drMofradDbContext)

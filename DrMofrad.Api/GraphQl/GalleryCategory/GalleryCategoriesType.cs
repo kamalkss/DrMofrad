@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using DrMofrad.Api.Model;
+﻿using DrMofrad.Api.Model;
 using HotChocolate;
 using HotChocolate.Types;
+using System.Linq;
 
 namespace DrMofrad.Api.GraphQl.GalleryCategory
 {
@@ -29,7 +29,7 @@ namespace DrMofrad.Api.GraphQl.GalleryCategory
             public IQueryable<Model.Gallery> GetGalleries(Model.GalleryCategory _galleryCategory,
                 [ScopedService] DrMofradDbContext drMofradDbContext)
             {
-                return drMofradDbContext.Galleries.Where(p => p.GalleryCategoryId == _galleryCategory.Id);
+                return drMofradDbContext.Galleries.Where(gallery => gallery.GalleryCategoryId == _galleryCategory.Id);
             }
         }
     }

@@ -26,7 +26,7 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.Members.FirstOrDefault();
         }
 
-        #endregion 
+        #endregion Member
 
         #region GalleryCategories
 
@@ -47,7 +47,7 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.GalleryCategories.FirstOrDefault();
         }
 
-        #endregion 
+        #endregion GalleryCategories
 
         #region Gallery
 
@@ -68,7 +68,7 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.Galleries.FirstOrDefault();
         }
 
-        #endregion 
+        #endregion Gallery
 
         #region activityCenter
 
@@ -89,7 +89,7 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.ActivityCenters.FirstOrDefault();
         }
 
-        #endregion 
+        #endregion activityCenter
 
         #region Appointment
 
@@ -110,7 +110,7 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.Appointments.FirstOrDefault();
         }
 
-        #endregion 
+        #endregion Appointment
 
         #region Article
 
@@ -131,7 +131,7 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.Articles.FirstOrDefault();
         }
 
-        #endregion
+        #endregion Article
 
         #region ArticleCategories
 
@@ -152,7 +152,196 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.ArticleCategories.FirstOrDefault();
         }
 
-        #endregion 
+        #endregion ArticleCategories
+
+        #region Clinic
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.Clinic> GetClinics([ScopedService] DrMofradDbContext member)
+        {
+            return member.Clinics;
+        }
+
+        public Model.Clinic FirstClinic([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.Clinics.FirstOrDefault();
+        }
+
+        #endregion Clinic
+
+        #region ContactUs
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.ContactU> GetContactUs([ScopedService] DrMofradDbContext member)
+        {
+            return member.ContactUs;
+        }
+
+        public Model.ContactU FirstContactUs([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.ContactUs.FirstOrDefault();
+        }
+
+        #endregion ContactUs
+
+        #region faq
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.Faq> GetFaqs([ScopedService] DrMofradDbContext member)
+        {
+            return member.Faqs;
+        }
+
+        public Model.Faq FirstFaq([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.Faqs.FirstOrDefault();
+        }
+
+        #endregion faq
+
+        #region File
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.File> GetFiles([ScopedService] DrMofradDbContext member)
+        {
+            return member.Files;
+        }
+
+        public Model.File FirstFile([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.Files.FirstOrDefault();
+        }
+
+        #endregion File
+
+        #region HoursAttend
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.HoursAttend> GetHoursAttends([ScopedService] DrMofradDbContext member)
+        {
+            return member.HoursAttends;
+        }
+
+        public Model.HoursAttend FirstHoursAttend([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.HoursAttends.FirstOrDefault();
+        }
+
+        #endregion HoursAttend
+
+        #region Opinion
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.Opinion> GetOpinions([ScopedService] DrMofradDbContext member)
+        {
+            return member.Opinions;
+        }
+
+        public Model.Opinion FirstOpinion([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.Opinions.FirstOrDefault();
+        }
+
+        #endregion Opinion
+
+        #region Page
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.Page> GetPages([ScopedService] DrMofradDbContext member)
+        {
+            return member.Pages;
+        }
+
+        public Model.Page FirstPage([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.Pages.FirstOrDefault();
+        }
+
+        #endregion Page
+
+        #region SeoSetting
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.SeoSetting> GetSeoSettings([ScopedService] DrMofradDbContext member)
+        {
+            return member.SeoSettings;
+        }
+
+        public Model.SeoSetting FirstSeoSetting([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.SeoSettings.FirstOrDefault();
+        }
+
+        #endregion SeoSetting
+
+        #region SlideShow
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.SlideShow> GetSlideShows([ScopedService] DrMofradDbContext member)
+        {
+            return member.SlideShows;
+        }
+
+        public Model.SlideShow FirstSlideShow([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.SlideShows.FirstOrDefault();
+        }
+
+        #endregion SlideShow
 
         #region Lang
 
@@ -173,6 +362,69 @@ namespace DrMofrad.Api.GraphQl
             return drMofradDbContext.Langs.FirstOrDefault();
         }
 
-        #endregion
+        #endregion Lang
+
+        #region TelegramMessage
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.TelegramMessage> GeTelegramMessages([ScopedService] DrMofradDbContext member)
+        {
+            return member.TelegramMessages;
+        }
+
+        public Model.TelegramMessage FirsTelegramMessage([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.TelegramMessages.FirstOrDefault();
+        }
+
+        #endregion TelegramMessage
+
+        #region TelegramUser
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.TelegramUser> GetTelegramUsers([ScopedService] DrMofradDbContext member)
+        {
+            return member.TelegramUsers;
+        }
+
+        public Model.TelegramUser FirsTelegramUser([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.TelegramUsers.FirstOrDefault();
+        }
+
+        #endregion TelegramUser
+
+        #region Lang
+
+        [UseDbContext(typeof(DrMofradDbContext))]
+        [UseSorting]
+        [UseFiltering]
+        //public IQueryable<Model.Member> GetMembers([ScopedService] DrMofradDbContext drMofradDbContext)
+        //{
+        //    return drMofradDbContext.Members;
+        //}
+        public IQueryable<Model.TelegramChannel> GetTelegramChannels([ScopedService] DrMofradDbContext member)
+        {
+            return member.TelegramChannels;
+        }
+
+        public Model.TelegramChannel FirstTelegramChannel([ScopedService] DrMofradDbContext drMofradDbContext)
+        {
+            return drMofradDbContext.TelegramChannels.FirstOrDefault();
+        }
+
+        #endregion Lang
     }
 }

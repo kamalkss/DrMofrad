@@ -1,4 +1,4 @@
 ﻿namespace DrMofrad.Api.GraphQl.Gallery
 {
-    public record AddGalleryPayload(string title);
+    public record AddGalleryPayload(Model.Gallery Gallerypayload);
 }

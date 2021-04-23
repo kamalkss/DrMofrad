@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace DrMofrad.Api.GraphQl.Cilinic
 {
-    public class CilinicType : ObjectType<Model.Clinic>
+    public class CilinicType : ObjectType<Clinic>
     {
-        protected override void Configure(IObjectTypeDescriptor<Model.Clinic> descriptor)
+        protected override void Configure(IObjectTypeDescriptor<Clinic> descriptor)
         {
             descriptor.Description("Clinics");
             descriptor.Field(clinic => clinic.Lang)
@@ -17,7 +17,7 @@ namespace DrMofrad.Api.GraphQl.Cilinic
 
         private class Resolver
         {
-            public Model.Lang GetLang(Model.Clinic _clinic, [ScopedService] DrMofradDbContext drMofradDbContext)
+            public Model.Lang GetLang(Clinic _clinic, [ScopedService] DrMofradDbContext drMofradDbContext)
             {
                 return drMofradDbContext.Langs.FirstOrDefault(lang => lang.Id == _clinic.LangId);
             }

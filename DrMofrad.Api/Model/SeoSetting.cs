@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class SeoSetting
+    public class SeoSetting
     {
         public int Id { get; set; }
         public string PageName { get; set; }

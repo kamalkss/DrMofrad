@@ -1,4 +1,4 @@
 ﻿namespace DrMofrad.Api.GraphQl.GalleryCategory
 {
-    public record AddGalleryCategoriesInput(string Title, string ImgUrl);
+    public record AddGalleryCategoriesInput(string GalleryCategoryTitle, string GalleryCategoryImgUrl);
 }

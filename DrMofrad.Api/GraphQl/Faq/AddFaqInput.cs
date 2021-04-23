@@ -2,5 +2,6 @@
 
 namespace DrMofrad.Api.GraphQl.Faq
 {
-    public record AddfaqInput(string Question, string Answer, int ShowCount, int LikeCount,DateTime date,int LangId);
+    public record AddfaqInput(string FaqQuestion, string FaqAnswer, int FaqShowCount, int FaqLikeCount,
+        DateTime Faqdate, int FaqLangId);
 }

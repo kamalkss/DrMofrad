@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace DrMofrad.Api.Model
 {
-    public partial class Article
+    public class Article
     {
         public Article()
         {

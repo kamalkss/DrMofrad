@@ -17,7 +17,6 @@ using DrMofrad.Api.GraphQl.TelegramChannel;
 using DrMofrad.Api.GraphQl.TelegramMessage;
 using DrMofrad.Api.GraphQl.TelegramUser;
 using DrMofrad.Api.Model;
-using GraphQL.Server.Ui.Voyager;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

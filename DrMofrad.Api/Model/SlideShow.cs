@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace DrMofrad.Api.Model
 {
-    public partial class SlideShow
+    public class SlideShow
     {
         public int Id { get; set; }
         public string Title { get; set; }

@@ -163,12 +163,12 @@ namespace DrMofrad.Api.GraphQl
         //{
         //    return drMofradDbContext.Members;
         //}
-        public IQueryable<Model.Clinic> GetClinics([ScopedService] DrMofradDbContext member)
+        public IQueryable<Clinic> GetClinics([ScopedService] DrMofradDbContext member)
         {
             return member.Clinics;
         }
 
-        public Model.Clinic FirstClinic([ScopedService] DrMofradDbContext drMofradDbContext)
+        public Clinic FirstClinic([ScopedService] DrMofradDbContext drMofradDbContext)
         {
             return drMofradDbContext.Clinics.FirstOrDefault();
         }
@@ -184,12 +184,12 @@ namespace DrMofrad.Api.GraphQl
         //{
         //    return drMofradDbContext.Members;
         //}
-        public IQueryable<Model.ContactU> GetContactUs([ScopedService] DrMofradDbContext member)
+        public IQueryable<ContactU> GetContactUs([ScopedService] DrMofradDbContext member)
         {
             return member.ContactUs;
         }
 
-        public Model.ContactU FirstContactUs([ScopedService] DrMofradDbContext drMofradDbContext)
+        public ContactU FirstContactUs([ScopedService] DrMofradDbContext drMofradDbContext)
         {
             return drMofradDbContext.ContactUs.FirstOrDefault();
         }

@@ -29,5 +29,18 @@ namespace DrMofrad.Api.GraphQl
             await eventSender.SendAsync(nameof(Subscription.OnActivityCenterAdded), ActivityCenter, cancellationToken);
             return new AddActivityCenterPayLoad(ActivityCenter);
         }
+
+        public async Task<AddActivityCenterPayLoad> RemoveActivityCenter(
+            RemoveActivityCenterInput remove,
+            [ScopedService] DrMofradDbContext drMofradDbContext,
+            [Service] ITopicEventSender eventSender,
+            CancellationToken cancellationToken)
+        {
+            var activityCenter = new Model.ActivityCenter() {Id = remove.ActivityCenterId};
+            drMofradDbContext.ActivityCenters.Remove(activityCenter);
+            await drMofradDbContext.SaveChangesAsync(cancellationToken);
+            await eventSender.SendAsync(nameof(Subscription.OnActivityCenterAdded), activityCenter, cancellationToken);
+            return new AddActivityCenterPayLoad(activityCenter);
+        }
     }
 }

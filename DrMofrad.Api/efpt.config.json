@@ -1,0 +1,112 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "DrmofradContext",
+   "ContextNamespace": "Models\\TryEFTools",
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models\\TryEFTools",
+   "ProceduresReturnList": false,
+   "ProjectRootNamespace": "DrMofrad.Api",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[ActivityCenters]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Appointments]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ArticleCategories]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Articles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clinics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ContactUs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Faqs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Files]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Galleries]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GalleryCategories]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HoursAttends]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Lang]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Members]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Opinions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Pages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SeoSettings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SlideShows]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TelegramChannels]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TelegramMessages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TelegramUsers]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "laptop-e48o71se.DRMofrad.dbo",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSpatial": false
+}
